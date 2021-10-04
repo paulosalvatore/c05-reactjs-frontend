@@ -1,25 +1,25 @@
 import { useState, useEffect } from "react";
 import { Api } from "../../api/Api";
 
-export const ProdutosList = () => {
-    const [produtos, setProdutos] = useState([]);
+export const ProductList = () => {
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const atualizarListaProdutos = async () => {
+        const loadProductList = async () => {
             const response = await Api.buildApiGetRequest(Api.readAllUrl());
 
             const results = await response.json();
 
-            setProdutos(results);
+            setProducts(results);
         };
 
-        atualizarListaProdutos();
+        loadProductList();
     }, []);
 
     return (
         <div>
-            {produtos.map((produtos, index) => (
-                <div key={"produtos_" + index}>{produtos.name}</div>
+            {products.map((produtos, index) => (
+                <div key={"product_list_" + index}>{produtos.name}</div>
             ))}
         </div>
     );
