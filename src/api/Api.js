@@ -1,11 +1,13 @@
 export const Api = {
-    baseUrl: "https://pokeapi.co/api/v2",
+    baseUrl: "http://localhost:3000",
 
-    readAllUrl: () => Api.baseUrl + "/pokemon",
+    // Endpoint
+
+    readAllUrl: () => Api.baseUrl + "/product",
 
     // GET
-    buildApiGetRequest: url => 
+    buildApiGetRequest: url =>
         fetch(url, {
-            method: "GET"
+            method: "GET",
         }),
 };
