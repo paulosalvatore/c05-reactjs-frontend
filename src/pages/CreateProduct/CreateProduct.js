@@ -15,7 +15,11 @@ export default function CreateProduct() {
         const payload = {
             name,
             price,
-            imageUrl,
+            images: [
+                {
+                    url: imageUrl,
+                },
+            ],
         };
 
         // Faz uma requisição no backend
