@@ -7,6 +7,7 @@ import { Home } from "./pages/Home/Home";
 // CSS
 import "./App.css";
 import CreateProduct from "./pages/CreateProduct/CreateProduct";
+import ViewProduct from "./pages/ViewProduct/ViewProduct";
 
 export function App() {
     return (
@@ -18,6 +19,8 @@ export function App() {
                     <Route path="/" exact={true} component={Home} />
 
                     <Route path="/product/create" component={CreateProduct} />
+
+                    <Route path="/product/view/:id" component={ViewProduct} />
                 </Switch>
             </div>
         </div>

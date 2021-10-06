@@ -1,7 +1,7 @@
 import React from "react";
 import { Api } from "../../api/Api";
 
-export default function CreateProduct() {
+export default function CreateProduct(props) {
     const handleSubmit = async event => {
         // Previne o comportamento padrão do submit, que no caso do form é o refresh
         event.preventDefault();
@@ -28,7 +28,17 @@ export default function CreateProduct() {
             payload
         );
 
-        console.log({ response });
+        const body = await response.json();
+
+        if (response.status === 201) {
+            // Product created successfully
+
+            const id = body.id;
+
+            props.history.push(`/product/view/${id}`);
+        } else {
+            // Error
+        }
     };
 
     return (
