@@ -3,11 +3,13 @@ import { Switch, Route, Link } from "react-router-dom";
 
 // Pages
 import { Home } from "./pages/Home/Home";
+import CreateProduct from "./pages/CreateProduct/CreateProduct";
+import ViewProduct from "./pages/ViewProduct/ViewProduct";
 
 // CSS
 import "./App.css";
-import CreateProduct from "./pages/CreateProduct/CreateProduct";
-import ViewProduct from "./pages/ViewProduct/ViewProduct";
+import "./styles/form.css";
+import "./styles/card.css";
 
 export function App() {
     return (
