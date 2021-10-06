@@ -1,5 +1,5 @@
 // React
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 // Pages
 import { Home } from "./pages/Home/Home";
@@ -12,7 +12,15 @@ import ViewProduct from "./pages/ViewProduct/ViewProduct";
 export function App() {
     return (
         <div className="App">
-            <header className="App-header">Product App</header>
+            <header className="App-header">
+                Product App
+                <br />
+                <Link to="/">Home</Link>
+                <br />
+                <Link to="/product/create">Create</Link>
+                <br />
+                <br />
+            </header>
 
             <div className="content">
                 <Switch>
