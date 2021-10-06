@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Api } from "../../api/Api";
+import ProductCard from "../ProductCard/ProductCard";
 
 export const ProductList = () => {
     const [products, setProducts] = useState([]);
@@ -18,8 +19,11 @@ export const ProductList = () => {
 
     return (
         <div>
-            {products.map((produtos, index) => (
-                <div key={"product_list_" + index}>{produtos.name}</div>
+            {products.map((product, index) => (
+                <ProductCard
+                    key={`product_list_${index}`}
+                    product={product}
+                ></ProductCard>
             ))}
         </div>
     );
