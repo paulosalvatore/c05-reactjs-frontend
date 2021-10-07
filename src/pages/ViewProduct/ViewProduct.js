@@ -17,7 +17,7 @@ export default function ViewProduct(props) {
         };
 
         loadProduct();
-    }, []);
+    }, [id]);
 
     if (!product) {
         return <div>Loading...</div>;
