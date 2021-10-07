@@ -3,7 +3,7 @@
     background: #099870;
     display: flex;
     justify-content: space-around;
-    height: 4em;
+    min-height: 4em;
     padding: 1em;
     width: 100vw;
 }
@@ -22,4 +22,10 @@
 
 .header a:hover {
     transform: scale(1.1);
+}
+
+@media only screen and (max-width: 360px) {
+    .header {
+        flex-direction: column;
+    }
 }
