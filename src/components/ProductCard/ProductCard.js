@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
     };
 
     return (
-        <div className="card" onClick={() => handleClick()}>
+        <div className="card" onClick={handleClick}>
             <div className="card__title">
                 <h1>{product.name}</h1>
             </div>
