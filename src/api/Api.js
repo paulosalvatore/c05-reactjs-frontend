@@ -5,6 +5,8 @@ export const Api = {
 
     readAllUrl: () => Api.baseUrl + "/product",
 
+    readByIdUrl: id => Api.baseUrl + "/product/" + id,
+
     createProductUrl: () => Api.baseUrl + "/product",
 
     // GET
