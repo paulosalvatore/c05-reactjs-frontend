@@ -6,7 +6,9 @@ export default function ProductCard({ product }) {
             <div className="card__title">
                 <h1>{product.name}</h1>
             </div>
-            <div className="card__price">{product.price}</div>
+
+            <div className="card__price">${product.price.toFixed(2)}</div>
+
             <div className="card__images">
                 {product.images.map(image => (
                     <div className="card__image">

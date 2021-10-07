@@ -44,46 +44,54 @@ export default function CreateProduct(props) {
     return (
         <div>
             <form className="form" onSubmit={handleSubmit}>
-                <label className="form__label" htmlFor="name">
-                    Name:
-                </label>
-                <br />
+                <div>
+                    <label className="form__label" htmlFor="name">
+                        Name:
+                    </label>
+                </div>
 
-                <input
-                    className="form__input-text"
-                    type="text"
-                    id="name"
-                    name="name"
-                />
-                <br />
+                <div>
+                    <input
+                        className="form__input-text"
+                        type="text"
+                        id="name"
+                        name="name"
+                    />
+                </div>
 
-                <label className="form__label" htmlFor="price">
-                    Price:
-                </label>
-                <br />
+                <div>
+                    <label className="form__label" htmlFor="price">
+                        Price:
+                    </label>
+                </div>
 
-                <input
-                    className="form__input-text"
-                    type="number"
-                    id="price"
-                    name="price"
-                />
-                <br />
+                <div>
+                    <input
+                        className="form__input-text"
+                        type="number"
+                        id="price"
+                        name="price"
+                    />
+                </div>
 
-                <label className="form__label" htmlFor="imageUrl">
-                    Image URL:
-                </label>
-                <br />
+                <div>
+                    <label className="form__label" htmlFor="imageUrl">
+                        Image URL:
+                    </label>
+                </div>
 
-                <input
-                    className="form__input-text"
-                    type="text"
-                    id="imageUrl"
-                    name="imageUrl"
-                />
-                <br />
+                <div>
+                    <input
+                        className="form__input-text"
+                        type="text"
+                        id="imageUrl"
+                        name="imageUrl"
+                    />
+                </div>
 
-                <input className="form__submit" type="submit" value="Add" />
+                <div>
+                    <input className="form__submit" type="submit" value="Add" />
+                </div>
             </form>
         </div>
     );
