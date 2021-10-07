@@ -11,6 +11,8 @@ import Header from "./components/Header/Header";
 import "./App.css";
 import "./styles/form.css";
 import "./styles/card.css";
+import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
+import DeleteProduct from "./pages/DeleteProduct/DeleteProduct";
 
 export function App() {
     return (
@@ -24,6 +26,16 @@ export function App() {
                     <Route path="/product/create" component={CreateProduct} />
 
                     <Route path="/product/view/:id" component={ViewProduct} />
+
+                    <Route
+                        path="/product/update/:id"
+                        component={UpdateProduct}
+                    />
+
+                    <Route
+                        path="/product/delete/:id"
+                        component={DeleteProduct}
+                    />
                 </Switch>
             </div>
         </div>

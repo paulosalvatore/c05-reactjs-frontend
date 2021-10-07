@@ -30,7 +30,7 @@ export default function ViewProduct(props) {
         <div className="product">
             <div className="product__buttons">
                 <LinkButton
-                    to={"/product/edit/" + id}
+                    to={"/product/update/" + id}
                     className="button button--primary"
                 >
                     Edit
