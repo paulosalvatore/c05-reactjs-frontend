@@ -1,0 +1,32 @@
+.form {
+    padding: 1em;
+}
+
+.form__label {
+    font-weight: bold;
+}
+
+.form__input-text {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0;
+    padding: 0.5em 1em;
+    width: 100%;
+}
+
+.form__submit {
+    background-color: #099870;
+    border: none;
+    border-radius: 0.25em;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em 0;
+    padding: 1em 1em;
+    width: 100%;
+}
+
+.form__submit:hover {
+    background-color: #45a049;
+}

@@ -43,26 +43,47 @@ export default function CreateProduct(props) {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name:</label>
+            <form className="form" onSubmit={handleSubmit}>
+                <label className="form__label" htmlFor="name">
+                    Name:
+                </label>
                 <br />
 
-                <input type="text" id="name" name="name" />
+                <input
+                    className="form__input-text"
+                    type="text"
+                    id="name"
+                    name="name"
+                />
                 <br />
 
-                <label htmlFor="price">Price:</label>
+                <label className="form__label" htmlFor="price">
+                    Price:
+                </label>
                 <br />
 
-                <input type="number" id="price" name="price" />
+                <input
+                    className="form__input-text"
+                    type="number"
+                    id="price"
+                    name="price"
+                />
                 <br />
 
-                <label htmlFor="imageUrl">Image URL:</label>
+                <label className="form__label" htmlFor="imageUrl">
+                    Image URL:
+                </label>
                 <br />
 
-                <input type="text" id="imageUrl" name="imageUrl" />
+                <input
+                    className="form__input-text"
+                    type="text"
+                    id="imageUrl"
+                    name="imageUrl"
+                />
                 <br />
 
-                <input type="submit" value="Add" />
+                <input className="form__submit" type="submit" value="Add" />
             </form>
         </div>
     );
