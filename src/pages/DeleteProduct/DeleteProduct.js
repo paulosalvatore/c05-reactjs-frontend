@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function DeleteProduct() {
-    return <div>DeleteProduct</div>;
+export default function DeleteProduct(props) {
+    const id = props.match.params.id;
+
+    return <div>DeleteProduct {id}</div>;
 }
