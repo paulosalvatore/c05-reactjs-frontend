@@ -11,6 +11,8 @@ export const Api = {
 
     updateUrl: id => Api.baseUrl + "/product/" + id,
 
+    deleteUrl: id => Api.baseUrl + "/product/" + id,
+
     // GET
     buildApiGetRequest: url =>
         fetch(url, {
@@ -35,5 +37,11 @@ export const Api = {
                 "Content-type": "application/json",
             }),
             body: JSON.stringify(body),
+        }),
+
+    // DELETE
+    buildApiDeleteRequest: url =>
+        fetch(url, {
+            method: "DELETE",
         }),
 };

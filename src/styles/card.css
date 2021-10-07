@@ -19,6 +19,10 @@
     background: rgb(250, 250, 250);
 }
 
+.card--full {
+    width: calc(100% - 1em - 1em - 0.5em - 0.5em - 0.25em);
+}
+
 .card__title h1 {
     margin: 0;
 }
