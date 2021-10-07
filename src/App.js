@@ -5,6 +5,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
 import CreateProduct from "./pages/CreateProduct/CreateProduct";
 import ViewProduct from "./pages/ViewProduct/ViewProduct";
+import Header from "./components/Header/Header";
 
 // CSS
 import "./App.css";
@@ -14,15 +15,7 @@ import "./styles/card.css";
 export function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                Product App
-                <br />
-                <Link to="/">Home</Link>
-                <br />
-                <Link to="/product/create">Create</Link>
-                <br />
-                <br />
-            </header>
+            <Header />
 
             <div className="content">
                 <Switch>

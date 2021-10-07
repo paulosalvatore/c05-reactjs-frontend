@@ -1,0 +1,25 @@
+.header {
+    align-items: center;
+    background: #099870;
+    display: flex;
+    justify-content: space-around;
+    height: 4em;
+    padding: 1em;
+    width: 100vw;
+}
+
+.header__logo {
+    width: 10em;
+    border-radius: 0.5em;
+}
+
+.header a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.1s ease-in;
+}
+
+.header a:hover {
+    transform: scale(1.1);
+}
