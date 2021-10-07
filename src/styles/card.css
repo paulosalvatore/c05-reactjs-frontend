@@ -9,9 +9,14 @@
     border-left: 0.25em solid #099870;
     border-radius: 0.5em;
     box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    cursor: pointer;
     padding: 1em;
     margin: 0.5em;
     width: 280px;
+}
+
+.card:hover {
+    background: rgb(250, 250, 250);
 }
 
 .card__title h1 {
