@@ -1,6 +1,10 @@
 export const Api = {
     baseUrl: "http://localhost:3000",
 
+    // Endpoint - Login
+
+    loginUrl: () => Api.baseUrl + "/login",
+
     // Endpoint - Product
 
     readAllUrl: () => Api.baseUrl + "/product",

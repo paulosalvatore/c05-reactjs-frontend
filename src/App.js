@@ -14,6 +14,7 @@ import "./styles/card.css";
 import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 import DeleteProduct from "./pages/DeleteProduct/DeleteProduct";
 import GuardedRoute from "./components/GuardedRoute/GuardedRoute";
+import Login from "./pages/Login/Login";
 
 export function App() {
     return (
@@ -23,6 +24,8 @@ export function App() {
             <div className="content">
                 <Switch>
                     <Route path="/" exact={true} component={Home} />
+
+                    <Route path="/login" component={Login} />
 
                     <GuardedRoute path="/guarded" component={Home} />
 
