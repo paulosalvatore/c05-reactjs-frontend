@@ -25,7 +25,8 @@ export default function CreateProduct(props) {
         // Faz uma requisição no backend
         const response = await Api.buildApiPostRequest(
             Api.createProductUrl(),
-            payload
+            payload,
+            true
         );
 
         const body = await response.json();

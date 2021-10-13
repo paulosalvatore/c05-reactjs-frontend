@@ -36,6 +36,7 @@ export const Api = {
             method: "POST",
             headers: new Headers({
                 "Content-type": "application/json",
+                ...(auth ? Api.authHeader() : {}),
             }),
             body: JSON.stringify(body),
         }),
@@ -46,6 +47,7 @@ export const Api = {
             method: "PATCH",
             headers: new Headers({
                 "Content-type": "application/json",
+                ...(auth ? Api.authHeader() : {}),
             }),
             body: JSON.stringify(body),
         }),
@@ -54,5 +56,6 @@ export const Api = {
     buildApiDeleteRequest: (url, auth) =>
         fetch(url, {
             method: "DELETE",
+            headers: auth ? new Headers(Api.authHeader()) : undefined,
         }),
 };

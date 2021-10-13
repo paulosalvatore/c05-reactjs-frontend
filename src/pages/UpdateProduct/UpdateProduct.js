@@ -8,7 +8,10 @@ export default function UpdateProduct(props) {
 
     useEffect(() => {
         const loadProduct = async () => {
-            const response = await Api.buildApiGetRequest(Api.readByIdUrl(id));
+            const response = await Api.buildApiGetRequest(
+                Api.readByIdUrl(id),
+                true
+            );
 
             const results = await response.json();
 
@@ -48,7 +51,8 @@ export default function UpdateProduct(props) {
         // Faz uma requisição no backend
         const response = await Api.buildApiPatchRequest(
             Api.updateUrl(id),
-            payload
+            payload,
+            true
         );
 
         const body = await response.json();

@@ -5,7 +5,10 @@ export default function DeleteProduct(props) {
     const id = props.match.params.id;
 
     const handleDelete = async event => {
-        const response = await Api.buildApiDeleteRequest(Api.deleteUrl(id));
+        const response = await Api.buildApiDeleteRequest(
+            Api.deleteUrl(id),
+            true
+        );
 
         if (response.status === 204) {
             // Delete product successfully

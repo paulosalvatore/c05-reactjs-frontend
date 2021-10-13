@@ -29,19 +29,22 @@ export function App() {
 
                     <GuardedRoute path="/guarded" component={Home} />
 
-                    <Route path="/product/create" component={CreateProduct} />
+                    <GuardedRoute
+                        path="/product/create"
+                        component={CreateProduct}
+                    />
 
                     <GuardedRoute
                         path="/product/view/:id"
                         component={ViewProduct}
                     />
 
-                    <Route
+                    <GuardedRoute
                         path="/product/update/:id"
                         component={UpdateProduct}
                     />
 
-                    <Route
+                    <GuardedRoute
                         path="/product/delete/:id"
                         component={DeleteProduct}
                     />
