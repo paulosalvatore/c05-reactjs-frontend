@@ -12,7 +12,10 @@ export default function ViewProduct(props) {
 
     useEffect(() => {
         const loadProduct = async () => {
-            const response = await Api.buildApiGetRequest(Api.readByIdUrl(id));
+            const response = await Api.buildApiGetRequest(
+                Api.readByIdUrl(id),
+                true
+            );
 
             const results = await response.json();
 

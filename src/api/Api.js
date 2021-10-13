@@ -17,14 +17,21 @@ export const Api = {
 
     deleteUrl: id => Api.baseUrl + "/product/" + id,
 
+    // Auth Header
+
+    authHeader: () => ({
+        Authorization: "Bearer " + localStorage.getItem("JWT"),
+    }),
+
     // GET
-    buildApiGetRequest: url =>
+    buildApiGetRequest: (url, auth) =>
         fetch(url, {
             method: "GET",
+            headers: auth ? new Headers(Api.authHeader()) : undefined,
         }),
 
     // POST
-    buildApiPostRequest: (url, body) =>
+    buildApiPostRequest: (url, body, auth) =>
         fetch(url, {
             method: "POST",
             headers: new Headers({
@@ -34,7 +41,7 @@ export const Api = {
         }),
 
     // PATCH
-    buildApiPatchRequest: (url, body) =>
+    buildApiPatchRequest: (url, body, auth) =>
         fetch(url, {
             method: "PATCH",
             headers: new Headers({
@@ -44,7 +51,7 @@ export const Api = {
         }),
 
     // DELETE
-    buildApiDeleteRequest: url =>
+    buildApiDeleteRequest: (url, auth) =>
         fetch(url, {
             method: "DELETE",
         }),

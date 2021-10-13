@@ -31,7 +31,10 @@ export function App() {
 
                     <Route path="/product/create" component={CreateProduct} />
 
-                    <Route path="/product/view/:id" component={ViewProduct} />
+                    <GuardedRoute
+                        path="/product/view/:id"
+                        component={ViewProduct}
+                    />
 
                     <Route
                         path="/product/update/:id"
