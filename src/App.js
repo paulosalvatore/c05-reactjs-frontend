@@ -13,6 +13,7 @@ import "./styles/form.css";
 import "./styles/card.css";
 import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 import DeleteProduct from "./pages/DeleteProduct/DeleteProduct";
+import GuardedRoute from "./components/GuardedRoute/GuardedRoute";
 
 export function App() {
     return (
@@ -22,6 +23,8 @@ export function App() {
             <div className="content">
                 <Switch>
                     <Route path="/" exact={true} component={Home} />
+
+                    <GuardedRoute path="/guarded" component={Home} />
 
                     <Route path="/product/create" component={CreateProduct} />
 
