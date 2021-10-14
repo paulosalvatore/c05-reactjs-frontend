@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Select from "react-select";
 import { Api } from "../../api/Api";
 
 export default function CreateProduct(props) {
+    const [categories, setCategories] = useState([]);
+
+    const [categoriesIds, setCategoriesIds] = useState([]);
+
+    useEffect(() => {
+        const loadCategories = async () => {
+            const response = await Api.buildApiGetRequest(
+                Api.readAllCategoriesUrl(),
+                true
+            );
+
+            const results = await response.json();
+
+            setCategories(results);
+        };
+
+        loadCategories();
+    }, []);
+
     const handleSubmit = async event => {
         // Previne o comportamento padrão do submit, que no caso do form é o refresh
         event.preventDefault();
@@ -20,6 +40,7 @@ export default function CreateProduct(props) {
                     url: imageUrl,
                 },
             ],
+            categoriesIds,
         };
 
         // Faz uma requisição no backend
@@ -40,6 +61,15 @@ export default function CreateProduct(props) {
         } else {
             // Error
         }
+    };
+
+    const options = categories.map(category => ({
+        value: category.id,
+        label: category.name,
+    }));
+
+    const handleCategoryChange = selectedOption => {
+        setCategoriesIds(selectedOption.map(option => option.value));
     };
 
     return (
@@ -87,6 +117,18 @@ export default function CreateProduct(props) {
                         type="text"
                         id="imageUrl"
                         name="imageUrl"
+                    />
+                </div>
+
+                <div>
+                    <label className="form__label">Categories:</label>
+                </div>
+
+                <div>
+                    <Select
+                        isMulti
+                        options={options}
+                        onChange={handleCategoryChange}
                     />
                 </div>
 

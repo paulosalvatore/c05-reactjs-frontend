@@ -17,6 +17,10 @@ export const Api = {
 
     deleteUrl: id => Api.baseUrl + "/product/" + id,
 
+    // Endpoint - Category
+
+    readAllCategoriesUrl: () => Api.baseUrl + "/category",
+
     // Auth Header
 
     authHeader: () => ({
