@@ -1,3 +1,5 @@
+import { LocalStorage } from "../local-storage/LocalStorage";
+
 export const Api = {
     baseUrl: "http://localhost:3000",
 
@@ -24,7 +26,7 @@ export const Api = {
     // Auth Header
 
     authHeader: () => ({
-        Authorization: "Bearer " + localStorage.getItem("JWT"),
+        Authorization: "Bearer " + LocalStorage.getJwt(),
     }),
 
     // GET
