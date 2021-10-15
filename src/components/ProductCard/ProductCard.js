@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
                 <h1>{product.name}</h1>
             </div>
 
-            <div className="card__price">${product.price.toFixed(2)}</div>
+            <div className="card__price">${product.price?.toFixed(2) || 0}</div>
 
             <div className="card__images">
                 {product.images.map((image, index) => (
