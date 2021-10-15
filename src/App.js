@@ -15,6 +15,7 @@ import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 import DeleteProduct from "./pages/DeleteProduct/DeleteProduct";
 import GuardedRoute from "./components/GuardedRoute/GuardedRoute";
 import Login from "./pages/Login/Login";
+import Logout from "./pages/Logout/Logout";
 
 export function App() {
     return (
@@ -26,6 +27,8 @@ export function App() {
                     <Route path="/" exact={true} component={Home} />
 
                     <Route path="/login" component={Login} />
+
+                    <GuardedRoute path="/logout" component={Logout} />
 
                     <GuardedRoute path="/guarded" component={Home} />
 
