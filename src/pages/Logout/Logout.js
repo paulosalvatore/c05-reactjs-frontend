@@ -1,10 +1,9 @@
 import React from "react";
-import { LocalStorage } from "../../local-storage/LocalStorage";
+import { Redirect } from "react-router";
+import { JwtHandler } from "../../jwt-handler/JwtHandler";
 
-export default function Logout(props) {
-    LocalStorage.clearJwt();
+export default function Logout() {
+    JwtHandler.clearJwt();
 
-    props.history.push("/login");
-
-    return <div>Logout</div>;
+    return <Redirect to="/login" />;
 }

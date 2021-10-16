@@ -1,6 +1,6 @@
 import React from "react";
 import { Api } from "../../api/Api";
-import { LocalStorage } from "../../local-storage/LocalStorage";
+import { JwtHandler } from "../../jwt-handler/JwtHandler";
 
 export default function Login(props) {
     const handleSubmit = async event => {
@@ -29,7 +29,7 @@ export default function Login(props) {
 
             // localStorage.setItem("JWT", accessToken);
 
-            LocalStorage.setJwt(accessToken);
+            JwtHandler.setJwt(accessToken);
 
             console.log({ accessToken });
 
